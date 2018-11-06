@@ -96,3 +96,4 @@ class ProductInfo(unittest.TestCase):
         if self.result == '1':
             self.assertEqual(self.info['code'], self.info['code'])
             self.assertEqual(self.info['msg'], self.msg)
+

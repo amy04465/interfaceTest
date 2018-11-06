@@ -1,0 +1,4 @@
+2018-11-06 22:43:40,573 - root - INFO - ********TEST START********
+2018-11-06 22:43:41,123 - root - INFO - login - Code:10001 - msg:错误的请求KEY
+2018-11-06 22:43:41,124 - root - INFO - *********TEST END*********
+2018-11-06 22:43:41,125 - root - INFO - Doesn't send report email to developer.

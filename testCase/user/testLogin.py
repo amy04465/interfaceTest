@@ -42,7 +42,7 @@ class Login(unittest.TestCase):
         test report description
         :return:
         """
-        self.case_name
+        return self.case_name
 
     def setUp(self):
         """
@@ -93,14 +93,14 @@ class Login(unittest.TestCase):
 
         :return:
         """
-        info = self.info
-        if info['code'] == 0:
-            # get uer token
-            token_u = common.get_value_from_return_json(info, 'member', 'token')
-            # set user token to config file
-            localReadConfig.set_headers("TOKEN_U", token_u)
-        else:
-            pass
+        # info = self.info
+        # if info['error_code'] == 0:
+        #     # get uer token
+        #     token_u = common.get_value_from_return_json(info, 'member', 'token')
+        #     # set user token to config file
+        #     localReadConfig.set_headers("TOKEN_U", token_u)
+        # else:
+        #     pass
         self.log.build_case_line(self.case_name, self.info['code'], self.info['msg'])
         print("测试结束，输出log完结\n\n")
 
@@ -115,10 +115,10 @@ class Login(unittest.TestCase):
 
         if self.result == '0':
             email = common.get_value_from_return_json(self.info, 'member', 'email')
-            self.assertEqual(self.info['code'], self.code)
-            self.assertEqual(self.info['msg'], self.msg)
+            self.assertEqual(self.info['error_code'], self.code)
+            #self.assertEqual(self.info['msg'], self.msg)
             self.assertEqual(email, self.email)
 
         if self.result == '1':
-            self.assertEqual(self.info['code'], self.code)
+            self.assertEqual(self.info['error_code'], self.error_code)
             self.assertEqual(self.info['msg'], self.msg)

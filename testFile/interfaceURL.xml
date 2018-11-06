@@ -83,4 +83,10 @@
         <module>product</module>
         <action>info</action>
     </url>
+
+    <url name="loginUser">
+        <group>ofpay</group>
+        <module>mobile</module>
+        <action>telcheck</action>
+    </url>
 </interface>

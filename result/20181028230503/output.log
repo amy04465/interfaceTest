@@ -1,4 +1,0 @@
-2018-10-28 23:05:21,548 - root - INFO - ********TEST START********
-2018-10-28 23:06:09,471 - root - ERROR - module 'HTMLTestRunner' has no attribute 'HTMLTestRunner'
-2018-10-28 23:06:41,278 - root - INFO - *********TEST END*********
-2018-10-28 23:06:41,279 - root - INFO - Doesn't send report email to developer.

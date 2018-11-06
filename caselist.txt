@@ -1,4 +1,5 @@
-user/testLogin
+login/testLogined
+#user/testLogin
 #user/testRegister
 #user/testRegisterQuick
 #user/testGenerate
