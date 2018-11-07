@@ -1,5 +1,5 @@
 login/testLogined
-user/testLogin
+#user/testLogin
 #user/testRegister
 #user/testRegisterQuick
 #user/testGenerate
@@ -9,7 +9,7 @@ user/testLogin
 #user/testUpdatePassword
 #user/testUploadImg
 #user/testGetAddressList
-#user/testGetAddress
+#user/testGetAddressS
 #product/testGetProductInfo
 #user/testAddAddress
 #user/testDeleteAddress
