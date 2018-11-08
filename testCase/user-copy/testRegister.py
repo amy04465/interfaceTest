@@ -112,7 +112,7 @@ class Register(unittest.TestCase):
             self.assertEqual(self.info['code'], self.code)
             self.assertEqual(self.info['msg'], self.msg)
             if self.case_name == 'register_EmailExist':
-                # delete register user from db
+                # delete register user-copy from db
                 sql = common.get_sql('newsitetest', 'rs_member', 'delete_user')
                 localConfigDB.executeSQL(sql, self.email)
                 localConfigDB.closeDB()

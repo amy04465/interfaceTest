@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>Test Report</h1>
-<p class='attribute'><strong>Start Time:</strong> 2018-11-06 22:20:44</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:00.515120</p>
-<p class='attribute'><strong>Status:</strong> Failure 1</p>
+<p class='attribute'><strong>Start Time:</strong> 2018-11-08 21:56:44</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:00.121117</p>
+<p class='attribute'><strong>Status:</strong> Pass 3</p>
 
 <p class='description'>Test Description</p>
 </div>
@@ -221,49 +221,97 @@ function showOutput(id, name) {
     <td>View</td>
 </tr>
 
-<tr class='failClass'>
+<tr class='passClass'>
     <td>paramunittest.Login_0</td>
     <td>1</td>
-    <td>0</td>
     <td>1</td>
+    <td>0</td>
     <td>0</td>
     <td><a href="javascript:showClassDetail('c1',1)">Detail</a></td>
 </tr>
 
-<tr id='ft1.1' class='none'>
-    <td class='failCase'><div class='testcase'>testLogined</div></td>
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testLogined</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
-        fail</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        pass</a>
 
-    <div id='div_ft1.1' class="popup_window">
+    <div id='div_pt1.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
         
-ft1.1: Traceback (most recent call last):
-  File "/Users/Amy/Desktop/interfaceTest1/testCase/login/testLogined.py", line 78, in testLogined
-    self.checkResult()
-  File "/Users/Amy/Desktop/interfaceTest1/testCase/login/testLogined.py", line 98, in checkResult
-    self.assertEqual(str(self.info['reason']), self.code)
-AssertionError: '错误的请求KEY' != '10001'
-- 错误的请求KEY
-+ 10001
+pt1.1: 
 
-Traceback (most recent call last):
-  File "/Users/Amy/Desktop/interfaceTest1/testCase/login/testLogined.py", line 78, in testLogined
-    self.checkResult()
-  File "/Users/Amy/Desktop/interfaceTest1/testCase/login/testLogined.py", line 98, in checkResult
-    self.assertEqual(str(self.info['reason']), self.code)
-AssertionError: '错误的请求KEY' != '10001'
-- 错误的请求KEY
-+ 10001
+        </pre>
+    </div>
+    <!--css div popup end-->
 
+    </td>
+</tr>
 
+<tr class='passClass'>
+    <td>paramunittest.Login_1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c2',1)">Detail</a></td>
+</tr>
+
+<tr id='pt2.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testLogined</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.1')" >
+        pass</a>
+
+    <div id='div_pt2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.1: 
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>paramunittest.Login_2</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c3',1)">Detail</a></td>
+</tr>
+
+<tr id='pt3.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>testLogined</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.1')" >
+        pass</a>
+
+    <div id='div_pt3.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.1: 
 
         </pre>
     </div>
@@ -274,9 +322,9 @@ AssertionError: '错误的请求KEY' != '10001'
 
 <tr id='total_row'>
     <td>Total</td>
-    <td>1</td>
+    <td>3</td>
+    <td>3</td>
     <td>0</td>
-    <td>1</td>
     <td>0</td>
     <td>&nbsp;</td>
 </tr>

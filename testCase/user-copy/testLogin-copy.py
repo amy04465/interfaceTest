@@ -97,7 +97,7 @@ class Login(unittest.TestCase):
         # if info['error_code'] == 0:
         #     # get uer token
         #     token_u = common.get_value_from_return_json(info, 'member', 'token')
-        #     # set user token to config file
+        #     # set user-copy token to config file
         #     localReadConfig.set_headers("TOKEN_U", token_u)
         # else:
         #     pass

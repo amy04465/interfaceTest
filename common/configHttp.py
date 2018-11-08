@@ -9,9 +9,10 @@ localReadConfig = readConfig.ReadConfig()
 class ConfigHttp:
 
     def __init__(self):
-        global scheme, host, port, timeout
+        global scheme, host, hostLogin,port, timeout
         scheme = localReadConfig.get_http("scheme")
         host = localReadConfig.get_http("baseurl")
+        hostLogin = localReadConfig.get_http("login_baseurl")
         port = localReadConfig.get_http("port")
         timeout = localReadConfig.get_http("timeout")
         self.log = Log.get_log()
@@ -30,6 +31,14 @@ class ConfigHttp:
         :return:
         """
         self.url = scheme+'://'+host+url
+
+    def set_url_login(self, url):
+        """
+        set_url_login
+        :param url:
+        :return:
+        """
+        self.url = scheme+ '://'+hostLogin +url
 
     def set_headers(self, header):
         """

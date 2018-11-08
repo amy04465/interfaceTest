@@ -1,0 +1,6 @@
+2018-11-08 21:56:44,110 - root - INFO - ********TEST START********
+2018-11-08 21:56:44,163 - root - INFO - login_success - Code:1 - msg:操作成功
+2018-11-08 21:56:44,195 - root - INFO - login_invalidName - Code:0 - msg:用户名或密码错误
+2018-11-08 21:56:44,230 - root - INFO - login_invalidPassword - Code:0 - msg:用户名或密码错误
+2018-11-08 21:56:44,232 - root - INFO - *********TEST END*********
+2018-11-08 21:56:44,232 - root - INFO - Doesn't send report email to developer.
