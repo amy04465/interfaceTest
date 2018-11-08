@@ -7,9 +7,9 @@
     </url>
 
     <url name="login">
-        <group>User</group>
-        <module>Member</module>
-        <action>loginCommon</action>
+        <group>api</group>
+        <module>Home</module>
+        <action>ApiLogin</action>
     </url>
 
     <url name="registerQuick">
@@ -84,9 +84,4 @@
         <action>info</action>
     </url>
 
-    <url name="loginUser">
-        <group>ofpay</group>
-        <module>mobile</module>
-        <action>telcheck</action>
-    </url>
 </interface>

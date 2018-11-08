@@ -14,7 +14,7 @@ class MyDB:
     database = localReadConfig.get_db("database")
     config = {
         'host': str(host),
-        'user': username,
+        'user-copy': username,
         'passwd': password,
         'port': int(port),
         'db': database
