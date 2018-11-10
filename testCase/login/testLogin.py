@@ -1,4 +1,10 @@
-# Created by AmyLiu on 18/11/1
+#!/usr/bin/env python3
+
+# -*- coding: utf-8 -*-
+
+# @Time: 18/11/10 上午12:03
+
+# author: amy.liu
 
 import unittest
 import paramunittest
@@ -15,6 +21,9 @@ info = {}
 
 @paramunittest.parametrized(*loginCase_xls)
 class Login(unittest.TestCase):
+    '''
+    登录
+    '''
     def setParameters(self, case_name, method, username, password, returnUrl, isremember,result, code, msg):
         """
         set params
@@ -56,7 +65,7 @@ class Login(unittest.TestCase):
         self.logger = self.log.get_logger()
         print(self.case_name+"  <<<<测试开始前准备")
 
-    def testLogined(self):
+    def testLogin(self):
         """
         test body
         :return:

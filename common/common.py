@@ -1,3 +1,12 @@
+#!/usr/bin/env python3
+
+# -*- coding: utf-8 -*-
+
+# @Time: 18/11/10 上午12:03
+
+# author: amy.liu
+
+from urllib.parse import urlparse, parse_qs
 import requests
 import readConfig as readConfig
 import os
@@ -50,6 +59,19 @@ def get_value_from_return_json(json, name1, name2):
     group = info[name1]
     value = group[name2]
     return value
+
+
+def get_token_from_data(response):
+    """
+    get token from response-> data
+    :param response:
+    :param name:
+    :return:
+    """
+    data_str = response['data']
+    query = urlparse(data_str).query
+    dict1 = dict([(k, v[0]) for k, v in parse_qs(query).items()])
+    return dict1['token']
 
 
 def show_return_msg(response):

@@ -12,6 +12,12 @@
         <action>ApiLogin</action>
     </url>
 
+        <url name="AddStoreInfo">
+        <group>api/product/v1.0</group>
+        <module>ProStore</module>
+        <action>Save</action>
+    </url>
+
     <url name="registerQuick">
         <group>User</group>
         <module>Member</module>

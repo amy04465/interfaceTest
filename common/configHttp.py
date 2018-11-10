@@ -1,8 +1,15 @@
+#!/usr/bin/env python3
+
+# -*- coding: utf-8 -*-
+
+# @Time: 18/11/10 上午12:03
+
+# author: amy.liu
+
 import requests
 import readConfig as readConfig
 from common.Log import MyLog as Log
 import json
-
 localReadConfig = readConfig.ReadConfig()
 
 
