@@ -39,7 +39,7 @@ class ProductInfo(unittest.TestCase):
 
         :return:
         """
-        self.case_name
+        return self.case_name
 
     def setUp(self):
         """

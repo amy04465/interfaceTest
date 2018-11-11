@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# coding=utf-8
 
 # -*- coding: utf-8 -*-
 
@@ -35,12 +36,11 @@ def login():
 
     # login
     response = localConfigHttp.post().json()
-    cookie = localConfigHttp.post().cookies
-    print(cookie)
-    # token = common.get_token_from_data(response)
-    # print('获取到的token: ' + token)
-    # return token
-    return cookie
+    # cookie = localConfigHttp.post().cookies
+    # print(cookie)
+    token = common.get_token_from_data(response)
+    print(u'获取到的token: ' + token)
+    return token
 
 
 # logout

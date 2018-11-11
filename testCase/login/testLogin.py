@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# coding=utf-8
 
 # -*- coding: utf-8 -*-
 
@@ -22,7 +23,7 @@ info = {}
 @paramunittest.parametrized(*loginCase_xls)
 class Login(unittest.TestCase):
     '''
-    登录
+    u'登录
     '''
     def setParameters(self, case_name, method, username, password, returnUrl, isremember,result, code, msg):
         """

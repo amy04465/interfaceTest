@@ -63,8 +63,9 @@ class AddStoreInfo(unittest.TestCase):
         self.complete_date = str(complete_date)
         self.lat = str(lat)
         self.lng = str(lng)
-        self.project_code = str(province_code)
+        self.project_code = str(project_code)
         self.project_name = str(project_name)
+        self.province_code = str(province_code)
         self.status = str(status)
         self.store_name = str(store_name)
         self.store_property = str(store_property)
@@ -88,7 +89,7 @@ class AddStoreInfo(unittest.TestCase):
         """
         self.log = Log.MyLog.get_log()
         self.logger = self.log.get_logger()
-        self.login_token = businessCommon.login()
+        # self.login_token = businessCommon.login()
         print(self.case_name+"  <<<<测试开始前准备")
 
     def testAddStoreInfo(self):
@@ -102,8 +103,9 @@ class AddStoreInfo(unittest.TestCase):
         print("第一步：设置url  "+self.url)
 
         # set headers
-        header = {"token": self.login_token}
-        configHttp.set_headers(header)
+        # header = {"Cookie": self.login_token}
+        token = localReadConfig.get_headers("token")
+        configHttp.set_headers(token)
 
         # set data -- post请求,请求体data必须的; get请求,参数params拼接在URL后面,有的话需要设置
         data = {"address": self.address, "area_code": self.area_code,
