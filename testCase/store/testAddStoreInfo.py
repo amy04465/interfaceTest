@@ -104,8 +104,10 @@ class AddStoreInfo(unittest.TestCase):
 
         # set headers
         # header = {"Cookie": self.login_token}
-        token = localReadConfig.get_headers("token")
-        configHttp.set_headers(token)
+        # token = localReadConfig.get_headers("token")
+        Authori = localReadConfig.get_headers("Authorization")
+        header = {"Authorization": Authori}
+        configHttp.set_headers(header)
 
         # set data -- post请求,请求体data必须的; get请求,参数params拼接在URL后面,有的话需要设置
         data = {"address": self.address, "area_code": self.area_code,
