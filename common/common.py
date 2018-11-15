@@ -31,7 +31,7 @@ def get_visitor_token():
     :return:
     """
     host = localReadConfig.get_http("BASEURL")
-    response = requests.get(host+"/v2/User/Token/generate")
+    response = requests.get(host + "/v2/User/Token/generate")
     info = response.json()
     token = info.get("info")
     logger.debug("Create token:%s" % (token))
@@ -82,9 +82,11 @@ def show_return_msg(response):
     """
     url = response.url
     msg = response.text
-    print("\n请求地址："+url)
+    print("\n请求地址：" + url)
     # 可以显示中文
-    print("\n请求返回值："+'\n'+json.dumps(json.loads(msg), ensure_ascii=False, sort_keys=True, indent=4))
+    print("\n请求返回值：" + '\n' + json.dumps(json.loads(msg), ensure_ascii=False, sort_keys=True, indent=4))
+
+
 # ****************************** read testCase excel ********************************
 
 
@@ -106,6 +108,22 @@ def get_xls(xls_name, sheet_name):
         if sheet.row_values(i)[0] != u'case_name':
             cls.append(sheet.row_values(i))
     return cls
+
+
+def save_resp_to_txt(txt_name, resp):
+    """
+    save the response to the txt
+    :param txt_name:
+    :return:
+    """
+    # get txt path
+    txtPath = os.path.join(proDir, "testFile", 'txt', txt_name)
+    # open txt and write
+    with open(txtPath, 'w') as f:
+        keyword = resp
+        f.write(keyword)
+        print(keyword + u' 保存至 ' + txt_name)
+
 
 # ****************************** read SQL xml ********************************
 database = {}
@@ -158,6 +176,8 @@ def get_sql(database_name, table_name, sql_id):
     db = get_xml_dict(database_name, table_name)
     sql = db.get(sql_id)
     return sql
+
+
 # ****************************** read interfaceURL xml ********************************
 
 
@@ -179,6 +199,7 @@ def get_url_from_xml(name):
     url = '/'.join(url_list)
     return url
 
+
 if __name__ == "__main__":
-    print(get_xls("login","loginUser"))
+    print(get_xls("login", "loginUser"))
     set_visitor_token_to_config()

@@ -25,7 +25,9 @@ class Login(unittest.TestCase):
     '''
     u'登录
     '''
-    def setParameters(self, case_name, method, username, password, returnUrl, isremember,result, code, msg):
+    def setParameters(self, case_name, method,
+                      username, password, returnUrl,
+                      isremember,result, code, msg):
         """
         set params
         :param case_name:
